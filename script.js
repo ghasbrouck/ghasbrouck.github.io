@@ -27,5 +27,21 @@ function changeColor() {
     } else {
         body.style.backgroundColor ="white";
     }
+
+    
   }
-  
+
+  function sendMessage() {
+        var message = document.getElementById("message").value;
+        var url = "/message.php?message=" + encodeURIComponent(message);
+        var xmlHR = new XMLHttpRequest();
+        xmlHR.onload = function() {
+            if (xmlHR.status === 200) {
+              console.log(xmlHR.responseText);
+            } else {
+              console.log("uhoh something went wrong");
+            }
+          };
+        xmlHR.open("GET", url, true);
+        xmlHR.send();
+    }
