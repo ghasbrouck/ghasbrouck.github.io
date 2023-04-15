@@ -1,9 +1,15 @@
-<?php
+<?php 
+
 session_start();
-if(!isset($_SESSION["counter"])) {
-    $_SESSION["counter"]=0;
-} else {
-    $_SESSION["counter"] += 1;
+
+if(!isset($_SESSION['counter'])) {
+    $_SESSION['counter'] = 0;
 }
-echo the $_SESSION['counter'];
+
+if(isset($_GET['message']) && strlen($_GET['message']) > 0) {
+    $_SESSION['counter']++;
+}
+
+echo $_SESSION['counter'];
+
 ?>
