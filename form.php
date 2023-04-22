@@ -7,6 +7,15 @@ $fName = $_POST["fName"];
 $lName = $_POST["lName"];
 $num = $_POST["num"];
 $addy = $_POST["addy"];
+$captcha;
+
+if(isset($_POST['g-recaptcha-response'])){
+    $captcha=$_POST['g-recaptcha-response'];
+  }
+  if(!$captcha){
+    echo '<h2>Please check the the captcha form.</h2>';
+    exit;
+  }
 
 $host = "localhost";
 $dbname = "my_first_database";
