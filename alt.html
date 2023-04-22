@@ -55,23 +55,26 @@
                 <td>She's very mean</td>
             </tr>
         </table>
-
-        <form action="" method="GET">
-            <p>Tell me a secret:</p>
-            <input type="text" name="input" value="">
-            <input type="submit" name="submit" onsubmit="secretForm(this.form)">
-            <p>Don't worry your secret is safe with me</p>
-        </form>
-        <form>
-            <label>What's your favorite subject?</label>
-            <select>
-                <option value=null>?</option>
-                <option value="a">Math</option>
-                <option value="b">Science</option>
-                <option value="c">Lunch</option>
-            </select>
-
-        </form>
+        <div class="element">
+            <form action="form.php" method="post">
+                <label>Email Address: </label>
+                <input type="text" name ="email"><br>
+                <label>First Name:</label>
+                <input type="text" name="fName"><br>
+                <label>Last Name:</label>
+                <input type="text" name="lName"><br>
+                <label>Phone Number:</label>
+                <input type="number" name="num"><br>
+                <label>Address: </label>
+                <input type="text" name="addy"><br><br>
+                <label>
+                    <input type="checkbox" name="terms">
+                    I agree to the <a href="#">Terms and Conditions</a>
+                </label><br><br>
+                <button>Send</button>
+            </form>
+        </div>
+        
     </div>
 </body>
 
